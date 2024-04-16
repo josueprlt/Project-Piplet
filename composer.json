@@ -1,0 +1,11 @@
+{
+    "require": {
+        "symfony/debug-pack": "^1.0",
+        "symfony/orm-pack": "^2.4",
+        "nelmio/api-doc-bundle": "^4.24",
+        "nelmio/cors-bundle": "^2.4"
+    },
+    "require-dev": {
+        "symfony/maker-bundle": "^1.56"
+    }
+}

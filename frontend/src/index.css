@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primitives Tokens  */
+    --clr-white: 0 0% 100%;
+    --clr-black: 0 0% 0%;
+    --clr-blue: 211 100% 50%;
+    --clr-dark-blue: 219.51 100% 8.04%;
+    --clr-gray: 218 9% 82%;
+
+
+    /* Secondary Tokens  */
+    --font-family: "The sans", sans-serif;
+
+    --clr-border-blue: var(--clr-blue);
+    --clr-bg-btn: 212 100% 47%;
+    --clr-bg-btn-hover: 211 100% 59%;
+    --clr-bg-body: var(--clr-dark-blue);
+    --clr-bg-btn-cate: 220 38% 23%;
+    --clr-bg-fond-burger: 220 100% 8%;
+    --clr-bg-burger: 218 100% 16%;
+    --clr-border-research: 219 20% 36%;
+    --clr-bg-gray: var(--clr-gray);
+
+    --size-slider: 35rem;
+    --size-h2: 31px;
+  }
+}
+
+#root {
+  height: 100vh;
+}

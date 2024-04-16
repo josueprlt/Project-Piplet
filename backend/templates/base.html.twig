@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        {% block stylesheets %}
+        <style type="text/css">
+            body {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "The sans", sans-serif;
+                background-color: #000e29;
+                color: white;
+            }
+
+            .section {
+                padding: 5rem 10rem;
+                text-align: center;
+            }
+
+            .title__h2 {
+                font-size: 32px;
+                margin: 0;
+                padding-bottom: 5rem;
+            }
+
+            .section__form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 3rem;
+                margin-bottom: 3rem;
+            }
+
+            .div__form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .form-control {
+                padding: .5rem 1rem;
+                background-color: #1C2841;
+                border: 1px solid #4A576F;
+                border-radius: .25rem;
+                font-size: 1.5rem;
+                color: white;
+            }
+
+            .form-control::placeholder {
+                font-size: 1rem;
+                color: gray;
+            }
+
+            .form-input {
+                display: flex;
+                flex-direction: column;
+                padding: .5rem 1rem;
+                background-color: #1C2841;
+                border: 1px solid #4A576F;
+                border-radius: .25rem;
+                font-size: 1.25rem;
+                color: white;
+            }
+
+            .form-input::placeholder {
+                font-size: 1.25rem;
+                color: gray;
+            }
+
+            .div__btn {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 3rem;
+                margin-top: 2.5rem;
+            }
+
+            .btn__form {
+                width: 10rem;
+                padding: 1rem 2rem;
+                border-radius: 22rem;
+                background-color: #0071ee;
+                color: white;
+                font-size: 16px;
+                font-weight: bold;
+                border: none;
+                cursor: pointer;
+            }
+
+            .btn__form:hover {
+                background-color: #2D91FF;
+            }
+
+            .btn__account {
+                width: 15rem;
+                padding: 1rem 2rem;
+                border-radius: 22rem;
+                border: 2px solid white;
+                background-color: none;
+                color: white;
+                font-size: 16px;
+                font-weight: bold;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            .btn__account:hover {
+                border: 2px solid #2D91FF;
+                background-color: #2D91FF;
+            }
+        </style>
+        {% endblock %}
+
+        {% block javascripts %}
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>

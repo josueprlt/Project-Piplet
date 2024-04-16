@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+
+    <section class="section">
+        <h2 class="title__h2">Veuillez vous enregistrer</h2>
+
+        {{ form_errors(registrationForm) }} 
+
+        {{ form_start(registrationForm) }}
+
+        <section class="section__form">
+            <div class="div__form">
+                {{ form_row(registrationForm.name, {
+                    attr: {
+                        'class': 'form-input',
+                        'placeholder': 'Entrez votre nom'
+                    }
+                }) }}
+            </div>
+
+            <div class="div__form">
+                {{ form_row(registrationForm.email, {
+                    attr: {
+                        'class': 'form-input',
+                        'placeholder': 'Entrez votre email'
+                    }
+                }) }}
+            </div>
+
+            <div class="div__form">
+                {{ form_row(registrationForm.plainPassword, {
+                    label: 'Password',
+                    attr: {
+                        'class': 'form-input',
+                        'placeholder': 'Entrez votre mot de passe'
+                    }
+                }) }}
+            </div>
+            <div class="div__form">
+                {{ form_row(registrationForm.agreeTerms) }}
+            </div>
+        </section>
+        
+        <div class="div__btn">
+            <button type="submit" class="btn__form">S'Enregistrer</button>
+            <a href="http://localhost:8080/login" class="btn__account">Vous avez déjà un compte</a>
+        </div>
+        {{ form_end(registrationForm) }}
+    </section>
+{% endblock %}
