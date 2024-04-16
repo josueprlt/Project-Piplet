@@ -5,8 +5,10 @@ export default function Root() {
 
   return (
     <>
-      <section className="bg-colorBgBody relative h-auto overflow-hidden">
-        <Navbar />
+      <section className="bg-light">
+        {/* <Navbar /> */}
+
+        <button className="btn btn-warning">Test</button>
         
         <Outlet />
       </section>

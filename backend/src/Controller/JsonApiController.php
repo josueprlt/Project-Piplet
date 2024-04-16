@@ -33,7 +33,6 @@ class JsonApiController extends AbstractController
             'controller_name' => 'JsonApiController',
         ]);
     }
-
     
     #[Route('/api/user', name: 'app_api_user')]
     public function getUserInfo(SerializerInterface $serializer): JsonResponse
