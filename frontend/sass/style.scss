@@ -4,4 +4,32 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 // Override des variables par défaut avant l'import
-$body-bg: #000;
+//$body-bg: #000;
+
+.avatar-trip-wrapper {
+    position: relative;
+    // border: 1px solid red;
+    width: 369px;
+    height: 431px;
+}
+
+.img-trip {
+    position: absolute;
+    z-index: 1;
+    &#casquette {
+        left: 125px;
+        top: -13px;
+    }
+    &#mustache {
+        left: 103px;
+        top: 145px;
+    }
+    &#glasses {
+        left: 122px;
+        top: 88px;
+        opacity: 0.95;
+    }
+    &#avatar {
+        z-index: 0;
+    }
+}
