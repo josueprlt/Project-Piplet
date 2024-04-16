@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from './routes/root.jsx';
 import ErrorPage from './ui/ErrorPage';
 
-import '../sass/style.scss';
+import '../sass/style.css';
 
 
 

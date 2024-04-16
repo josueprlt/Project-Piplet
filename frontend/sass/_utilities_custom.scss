@@ -1,0 +1,311 @@
+$utilities: ()!default;
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "font-family": (
+      property: font-family,
+      class: ff,
+      responsive: false,
+      values: (
+        inter: 'Inter',
+        roboto: 'Roboto',
+        sans-serif: sans-serif,
+      ),
+    )
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "width": (
+      property: width,
+      class: w,
+      responsive: true,
+      values: (
+        0: 0rem,
+        1: 1rem,
+        2: 2rem,
+        3: 3rem,
+        4: 4rem,
+        5: 5rem,
+        6: 6rem,
+        7: 7rem,
+        8: 8rem,
+        9: 9rem,
+        10: 10rem,
+      ),
+    )
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "height": (
+      property: height,
+      class: h,
+      responsive: true,
+      values: (
+        0: 0rem,
+        1: 1rem,
+        2: 2rem,
+        3: 3rem,
+        4: 4rem,
+        5: 5rem,
+        6: 6rem,
+        7: 7rem,
+        8: 8rem,
+        9: 9rem,
+        10: 10rem,
+        full: 100%,
+      ),
+    )
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "top": (
+      property: top,
+      class: t,
+      responsive: false,
+      values: (
+        negative: -2.75rem,
+        0: 0%,
+        10: 10%,
+        20: 20%,
+        30: 30%,
+        40: 40%,
+        45: 45%,
+        50: 50%,
+        60: 60%,
+        70: 70%,
+        80: 80%,
+        90: 90%,
+        100: 100%,
+      ),
+    )
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "bottom": (
+      property: bottom,
+      class: bt,
+      responsive: false,
+      values: (
+        0: 0%,
+        10: 10%,
+        20: 20%,
+        30: 30%,
+        40: 40%,
+        45: 45%,
+        50: 50%,
+        60: 60%,
+        70: 70%,
+        80: 80%,
+        90: 90%,
+        100: 100%,
+      ),
+    )
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "start": (
+      property: left,
+      class: l,
+      responsive: false,
+      values: (
+        negative: -2.75rem,
+        0: 0%,
+        10: 10%,
+        20: 20%,
+        30: 30%,
+        40: 40%,
+        45: 45%,
+        50: 50%,
+        60: 60%,
+        70: 70%,
+        80: 80%,
+        90: 90%,
+        100: 100%,
+      ),
+    )
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "end": (
+      property: right,
+      class: r,
+      responsive: false,
+      values: (
+        0: 0%,
+        10: 10%,
+        20: 20%,
+        30: 30%,
+        40: 40%,
+        45: 45%,
+        50: 50%,
+        60: 60%,
+        70: 70%,
+        80: 80%,
+        90: 90%,
+        100: 100%,
+      ),
+    )
+  )
+);
+
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "padding": (
+      property: padding,
+      class: pad,
+      responsive: true,
+      values: (
+        0: 0rem,
+        1: 1rem,
+        2: 2rem,
+        3: 3rem,
+        4: 4rem,
+        5: 5rem,
+        6: 6rem,
+        7: 7rem,
+        8: 8rem,
+        9: 9rem,
+        10: 10rem,
+      ),
+    )
+  )
+);
+$utilities: map-merge(
+  $utilities,
+  (
+    "padding-left": (
+      property: padding-left,
+      class: pad-l,
+      responsive: true,
+      values: (
+        0: 0rem,
+        1: 1rem,
+        2: 2rem,
+        3: 3rem,
+        4: 4rem,
+        5: 5rem,
+        6: 6rem,
+        7: 7rem,
+        8: 8rem,
+        9: 9rem,
+        10: 10rem,
+      ),
+    )
+  )
+);
+$utilities: map-merge(
+  $utilities,
+  (
+    "padding-right": (
+      property: padding-right,
+      class: pad-r,
+      responsive: true,
+      values: (
+        0: 0rem,
+        1: 1rem,
+        2: 2rem,
+        3: 3rem,
+        4: 4rem,
+        5: 5rem,
+        6: 6rem,
+        7: 7rem,
+        8: 8rem,
+        9: 9rem,
+        10: 10rem,
+      ),
+    )
+  )
+);
+$utilities: map-merge(
+  $utilities,
+  (
+    "padding-top": (
+      property: padding-top,
+      class: pad-t,
+      responsive: true,
+      values: (
+        0: 0rem,
+        undemi: .5rem,
+        1: 1rem,
+        2: 2rem,
+        3: 3rem,
+        4: 4rem,
+        5: 5rem,
+        6: 6rem,
+        7: 7rem,
+        8: 8rem,
+        9: 9rem,
+        10: 10rem,
+      ),
+    )
+  )
+);
+$utilities: map-merge(
+  $utilities,
+  (
+    "padding-bottom": (
+      property: padding-bottom,
+      class: pad-bt,
+      responsive: true,
+      values: (
+        0: 0rem,
+        undemi: .5rem,
+        1: 1rem,
+        2: 2rem,
+        3: 3rem,
+        4: 4rem,
+        5: 5rem,
+        6: 6rem,
+        7: 7rem,
+        8: 8rem,
+        9: 9rem,
+        10: 10rem,
+      ),
+    )
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "margin": (
+      property: margin,
+      class: mar,
+      responsive: true,
+      values: (
+        0: 0rem,
+        1: 1rem,
+        2: 2rem,
+        3: 3rem,
+        4: 4rem,
+        5: 5rem,
+        6: 6rem,
+        7: 7rem,
+        8: 8rem,
+        9: 9rem,
+        10: 10rem,
+      ),
+    )
+  )
+);
