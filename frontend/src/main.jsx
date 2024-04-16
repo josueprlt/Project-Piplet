@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import Root from './routes/root.jsx';
 import ErrorPage from './ui/ErrorPage';
