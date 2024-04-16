@@ -43,9 +43,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 255)]
     private ?string $imgProfile = null;
 
-    #[ORM\ManyToMany(targetEntity: Movie::class, inversedBy: 'users')]
-    private Collection $movies;
-
     public function __construct()
     {
         $this->roles = ['ROLE_USER'];
@@ -148,30 +145,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setImgProfile(string $imgProfile): static
     {
         $this->imgProfile = $imgProfile;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, Movie>
-     */
-    public function getMovies(): Collection
-    {
-        return $this->movies;
-    }
-
-    public function addMovie(Movie $movie): static
-    {
-        if (!$this->movies->contains($movie)) {
-            $this->movies->add($movie);
-        }
-
-        return $this;
-    }
-
-    public function removeMovie(Movie $movie): static
-    {
-        $this->movies->removeElement($movie);
 
         return $this;
     }

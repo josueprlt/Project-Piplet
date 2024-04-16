@@ -67,14 +67,4 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
     //            ->getOneOrNullResult()
     //        ;
     //    }
-    public function findUserWithMovies(int $userId): ?User
-    {
-        return $this->createQueryBuilder('u')
-            ->leftJoin('u.movies', 'm') // Joindre la relation many-to-many avec les films
-            ->addSelect('m') // Sélectionner également les films
-            ->where('u.id = :userId')
-            ->setParameter('userId', $userId)
-            ->getQuery()
-            ->getOneOrNullResult();
-    }
 }
