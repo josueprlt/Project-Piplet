@@ -7,9 +7,11 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "axios": "^1.6.8",
     "class-variance-authority": "^0.7.0",
-    "js-cookie": "^3.0.5"
+    "js-cookie": "^3.0.5",
+    "react-bootstrap": "^2.10.2"
   },
   "devDependencies": {
+    "bootstrap": "^5.3.3",
     "tailwind-scrollbar": "^3.1.0"
   }
 }
