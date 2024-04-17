@@ -10,7 +10,11 @@ export default function Root() {
         </div>
 
 
-        <section className="container d-md-flex gap-3 pad-t-5 justify-content-center justify-content-md-between">
+        <section className="container justify-content-center justify-content-md-between">
+
+          <div className="row">
+            
+          </div>
 
           <div className="text-center text-md-start pad-l-3 pad-l-md-3 pad-r-md-0 pad-r-3 pad-t-3 col-md-6">
 
@@ -21,13 +25,13 @@ export default function Root() {
 
             <div className="d-flex flex-column gap-1">
               <label className="fs-6 pad-bt-1 pad-t-1">Vous venez d’arriver ?</label>
-              <button className="btn btn-primary pad-t-undemi pad-bt-undemi">INSCRIPTION</button>
+              <button className="btn btn-primary pad-t-undemi pad-bt-undemi text-uppercase btn-lg">Inscription</button>
               <span className="ff-roboto fs-6 fst-italic">C'est rapide et gratuit</span>
             </div>
 
             <div className="d-grid flex-column">
               <label className="fs-6 pad-bt-1 pad-t-2">Ou si tu as déjà un compte</label>
-              <button className="btn btn-outline-primary pad-t-undemi pad-bt-undemi">CONNEXION</button>
+              <button className="btn btn-outline-primary text-uppercase btn-lg">Connexion</button>
               <a href="#!" className="text-primary link-offset-1">Je ne me rappelle pas</a>
             </div>
 

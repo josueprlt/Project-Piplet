@@ -2,6 +2,7 @@
 @import "./variables_overrides";
 @import "./utilities_custom";
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+//récupère tous bootstrap, peut-être opti en récupérant les composants que l'on a besoin
 
 // Override des variables par défaut avant l'import
 //$body-bg: #000;
