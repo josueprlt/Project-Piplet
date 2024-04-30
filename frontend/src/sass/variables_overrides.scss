@@ -1,0 +1,16 @@
+$primary: #104547;
+$dark: #292E2E;
+$light: #C3C3C3;
+$btn-border-radius: 4px;
+
+
+$utilities: (
+ "font-size": (
+  property: font-size,
+  class: fs,
+  values: (
+   16: 16px,
+   20   : 20px,
+  )
+ )
+);

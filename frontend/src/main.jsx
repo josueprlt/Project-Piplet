@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Root from './routes/root.jsx';
+import Login from './routes/login.jsx';
 import ErrorPage from './ui/ErrorPage';
 
-import '../sass/style.scss';
+import './sass/css/style.css';
 
 
 
@@ -13,6 +14,11 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/login',
+    element: <Login />,
     errorElement: <ErrorPage />,
   }
 ]);
