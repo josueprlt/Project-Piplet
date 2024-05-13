@@ -1,0 +1,51 @@
+$primary: #104547;
+$dark: #292E2E;
+$light: #C3C3C3;
+$success: #67EC84;
+$warning: #ECB767;
+$danger:#EC6767;
+$success-text-emphasis: #3A834A;
+$warning-text-emphasis: #BA945C;
+$danger-text-emphasis: #BC5454;
+$btn-border-radius: 4px;
+$btn-lg-border-radius: 4px;
+
+
+$secondary: #FF205B;
+$info: #FBEFF2;
+$light: #E6E6E6;
+$body: #8f8f8f;
+
+$utilities: (
+ "font-size": (
+  property: font-size,
+  class: fs,
+  values: (
+   16: 16px,
+   20: 20px,
+  )
+ )
+);
+
+$utilities: (
+ "height": (
+  property: height,
+  class: h,
+  values: (
+   8: 8px,
+   100: 100%,
+  )
+ )
+);
+
+$utilities: (
+ "width": (
+  property: width,
+  class: w,
+  values: (
+   160: 160px,
+   327: 327px,
+   100: 100%,
+  )
+ )
+);

@@ -1,0 +1,38 @@
+.login__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+    
+    &_col1 {
+        background-image: url("../../public/piplet-moliere.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+
+    &_col2 {
+        margin: auto auto;
+        max-width: 30rem;
+
+        &_para {
+            padding-top: .5rem;
+            font-size: clamp(16px, 5vw, 20px);
+        }
+    }
+
+    &_logo {
+        font-size: clamp(1.625rem, 5vw, 209px);
+    }
+
+    &_btn {
+        border-radius: 0;
+    }
+}
+
+.div__svg {
+    position: absolute;
+    top: .35rem;
+    right: 1rem;
+    cursor: pointer;
+}
