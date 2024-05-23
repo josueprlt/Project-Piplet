@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Outlet } from "react-router-dom";
-import { Logo, Eye, EyeSlash, CheckCircle } from "../../components/icons";
+import { Logo } from "../../components/icons";
+import { BsEye, BsEyeSlash, BsCheckCircle } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useUserContext } from '../UserContext';
 import axios from 'axios';
@@ -24,7 +25,7 @@ function PasswordField({ value, change }) {
                 onChange={change}
             />
             <div className='div__svg' onClick={handleTogglePasswordVisibility}>
-                {showPassword ? <Eye /> : <EyeSlash />}
+                {showPassword ? <BsEye style={{color: '#104547', fontSize: '25px'}} /> : <BsEyeSlash style={{color: '#104547', fontSize: '25px'}} />}
             </div>
         </div>
     );
@@ -216,7 +217,7 @@ export default function RegisterPage() {
             console.log(response);
             if (response.data.message.includes("Cet e-mail est disponible.")) {
                 await handlerSendMail();
-                idLoader.classList.add('visually-hidden');
+                /* idLoader.classList.add('visually-hidden'); */
             }
         } catch (error) {
             setErrorRegister(
@@ -272,7 +273,7 @@ export default function RegisterPage() {
 
                                                 <p>Nous vous envoyons un e-mail de confirmation</p>
                                                 <div className='row align-items-center mt-5 justify-content-center justify-content-md-start'>
-                                                    <CheckCircle className='col-auto' />
+                                                    <BsCheckCircle className='col-auto' style={{color: '#6B9C3E', fontSize: '30px'}} />
                                                     <p className='col-auto m-0 text-success-emphasis'>Mail de récupération envoyé</p>
                                                 </div>
 

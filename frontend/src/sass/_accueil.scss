@@ -1,0 +1,116 @@
+.navbar-div {
+    width: 42px;
+    height: 42px;
+    border: 2px solid #2C73DF;
+    border-radius: 50%;
+    overflow: hidden;
+
+    &-img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &-svg {
+        transform: rotate(180deg);
+    }
+}
+
+#notif-span {
+    top: 5px;
+    left: 23px;
+    padding: .35rem;
+}
+
+.article {
+    position: relative;
+    width: 100%;
+    height: 342px;
+    padding: 3rem 0 1rem 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 4px;
+    border: 1px solid #D7D7D7;
+
+    &-link {
+        position: absolute;
+        top: 1rem;
+        right: 0;
+    }
+
+    &-content {
+        font-size: clamp(16px, 2em, 1rem);;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $light;
+        color: $dark;
+    }
+
+    &-author {
+        font-size: 16px;
+        font-style: italic;
+        text-decoration: underline;
+    }
+
+    &-count {
+        font-size: 12px;
+        color: #353A3A;
+    }
+
+    &-div {
+        display: flex;
+        align-items: center;
+
+        &-like {
+            border-left: 1px solid #D5D6D6;
+        }
+    }
+
+
+    &-commentaire {
+        color: $primary;
+        text-decoration: underline;
+    }
+}
+
+
+.responsive {
+    padding: 0 5rem;
+}
+
+.test {
+    background-color: black;
+    color: black;
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon   {
+  background-color: $primary;
+}
+
+.carousel-indicators li {
+  background-color: blue;
+}
+
+.carousel-indicators .active {
+  background-color: red;
+}
+
+
+.carousel-control-prev-icon::before {
+  border-width: 0 3px 3px 0;
+  transform: rotate(135deg); /* Forme de la flèche gauche */
+}
+
+.carousel-control-next-icon::before {
+  border-width: 0 3px 3px 0;
+  transform: rotate(-45deg); /* Forme de la flèche droite */
+}
+
+/* Changer la couleur des indicateurs */
+.carousel-indicators button {
+  background-color: blue; /* Changez cette couleur selon vos besoins */
+}
+
+/* Changer la couleur des indicateurs actifs */
+.carousel-indicators .active {
+  background-color: green; /* Changez cette couleur selon vos besoins */
+}

@@ -5,11 +5,14 @@ import { UserProvider } from './ui/UserContext';
 
 import Root from './routes/root.jsx';
 import Login from './routes/login.jsx';
+import Logout from './routes/logout.jsx';
 import Register from './routes/register.jsx';
 import RegisterConfirm from './routes/registerconfirm.jsx';
 import Dashboard from './routes/dashboard.jsx';
 import App from './App.jsx';
 import ErrorPage from './ui/ErrorPage';
+
+import Reward from "./ui/DashboardPage/reward.jsx";
 
 import './sass/css/style.css';
 
@@ -24,6 +27,11 @@ const router = createBrowserRouter([
   {
     path: '/login',
     element: <Login />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/logout',
+    element: <Logout />,
     errorElement: <ErrorPage />,
   },
   {
@@ -43,6 +51,16 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard',
+    element: <Dashboard />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/dashboard/account',
+    element: <Dashboard />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/dashboard/reward',
     element: <Dashboard />,
     errorElement: <ErrorPage />,
   }

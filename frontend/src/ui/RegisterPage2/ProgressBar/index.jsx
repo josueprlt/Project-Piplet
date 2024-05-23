@@ -1,4 +1,4 @@
-import { ArrowRight } from "../../../components/icons";
+import { BsArrowRight } from "react-icons/bs";
 
 export default function ProgressBar({ step, handlenextstep, handlebackstep, handlenextstepfinal }) {
 
@@ -9,7 +9,7 @@ export default function ProgressBar({ step, handlenextstep, handlebackstep, hand
 
                 {step === 3 ? (
                     <div className="d-flex justify-content-between">
-                        {!(step === 1) ? <ArrowRight id="rotate__element" className='cursor-pointer mb-3' onClick={handlebackstep} /> : ''}
+                        {!(step === 1) ? <BsArrowRight id="rotate__element" className='cursor-pointer mb-3' onClick={handlebackstep} style={{color: '#104547', fontSize: '40px'}} /> : ''}
                         <button className="text-uppercase btn btn-primary cursor-pointer mb-4" onClick={handlenextstepfinal} >C'est Parti ! 😎</button>
                     </div>
                 ) : (
@@ -18,12 +18,12 @@ export default function ProgressBar({ step, handlenextstep, handlebackstep, hand
 
                         {step === 1 ? (
                             <div className="d-flex justify-content-end">
-                                <ArrowRight className='cursor-pointer mb-3' onClick={handlenextstep} />
+                                <BsArrowRight className='cursor-pointer mb-3' onClick={handlenextstep} style={{color: '#104547', fontSize: '40px'}} />
                             </div>
                         ) : (
                             <div className="d-flex justify-content-between">
-                                <ArrowRight id="rotate__element" className='cursor-pointer mb-3' onClick={handlebackstep} />
-                                <ArrowRight className='cursor-pointer mb-3' onClick={handlenextstep} />
+                                <BsArrowRight id="rotate__element" className='cursor-pointer mb-3' onClick={handlebackstep} style={{color: '#104547', fontSize: '40px'}} />
+                                <BsArrowRight className='cursor-pointer mb-3' onClick={handlenextstep} style={{color: '#104547', fontSize: '40px'}} />
                             </div>
                         )}
                     </div>

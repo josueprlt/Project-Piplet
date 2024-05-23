@@ -1,0 +1,130 @@
+.menu-icon {
+  width: 31px;
+  height: 10px;
+  position: relative;
+  
+  & span {
+    background-color: black;
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    background-color: $primary;
+
+    &:first-child {
+      width: 33px;
+      top: 0;
+      right: 0;
+    }
+    
+    &:last-child {
+      width: 21px;
+      top: 8px;
+      right: 0;
+      transition: width .5s ease-in-out;
+    }
+  }
+
+  &-responsive {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0);
+    transform: translateX(100%);
+    z-index: 10;
+    
+    &-active {
+      background-color: rgba(0, 0, 0, 0.414);
+      transform: translateX(0);
+      transition: transform 0 ease-in-out,
+                  background-color .5 ease-in-out .5s;
+    }
+
+    &-content {
+      height: 100vh;
+      background-color: $outline;
+      transform: translateX(100%);
+      transition: transform .5s ease-in-out .5s;
+      
+      &-active {
+        transform: translateX(0);
+        transition: transform .5s ease-in-out;
+      }
+    }
+
+  }
+}
+
+
+/* #mobile-nav {
+  ul {
+      li {
+          a.nav-link {
+              position: relative;
+              padding: 1rem;
+              &.active {
+                  background-color: darken($dark, 4%);
+                  color: $light;
+                  padding-left: 2rem;
+                  &::after {
+                      content: "";
+                      height: 100%;
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 5px;
+                      display: inline-flex;
+                      background-color: $primary;
+                      border-top-right-radius: 2px;
+                      border-bottom-right-radius: 2px;
+                  }
+              }
+          }
+      }
+  }
+} */
+
+.slogan, #slogan {
+  font-size: 0.7rem;
+  line-height: 0.7rem;
+}
+
+#main-header {
+  @include header-bg;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  .nav-link {
+      padding: 1rem;
+      position: relative;
+      &.active {
+          font-weight: 500;
+          &::after {
+              content: "";
+              display: inline-flex;
+              height: 2px;
+              background-color: $primary;
+              width: 100%;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              border-top-left-radius: 1px;
+              border-top-right-radius: 1px;
+          }
+      }
+  }
+}
+
+#main-logo {
+  width: 4rem;
+}
+
+@media screen and (min-width: 992px) {
+  #main-logo {
+  }
+}

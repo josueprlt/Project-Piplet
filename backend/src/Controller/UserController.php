@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Entity\Notification;
 use App\Repository\UserRepository;
 use App\Security\UsersAuthenticator;
 
@@ -10,6 +11,8 @@ use Doctrine\ORM\EntityManagerInterface;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Bundle\FrameworkBundle\Controller\AuthController;
+
+use Firebase\JWT\JWT;
 
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
@@ -24,6 +27,15 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class UserController extends AbstractController
 {
+
+    private $entityManager;
+
+    public function __construct(EntityManagerInterface $entityManager)
+    {
+        $this->entityManager = $entityManager;
+    }
+
+
     #[Route('/api/firstregister', name: 'api_register_first_user')]
     public function CreateFirstUser(Request $request, EntityManagerInterface $entityManager)
     {
@@ -100,20 +112,36 @@ class UserController extends AbstractController
 
 
     #[Route('/api/getuserlog', name: 'app_api_user')]
-    public function getUserLogin(Request $request, EntityManagerInterface $entityManager): Response
+    public function getUserLogin(TokenStorageInterface $tokenStorage, EntityManagerInterface $entityManager): Response
     {
-        if ($request->isMethod('POST')) {
-            
-            $data = json_decode($request->getContent(), true);
-            
-            $userMail = $data['username'] ?? null;
-            $existingUser = $entityManager->getRepository(User::class)->findOneBy(['email' => $userMail]);
-            
+        $token = $tokenStorage->getToken();
+
+        if ($token) {
+            $tokenParts = explode('.', $token->getCredentials());
+            $encodedPayload = $tokenParts[1];
+            $decodedPayload = base64_decode($encodedPayload);
+            $userData = json_decode($decodedPayload, true);
+            $email = $userData['username'];
+    
+            $query = $entityManager->createQuery(
+                'SELECT u FROM App\Entity\User u WHERE u.email = :email'
+            )->setParameter('email', $email);
+    
+            $existingUser = $query->getOneOrNullResult();
+    
             if ($existingUser) {
-                return new JsonResponse(['message' => 'Données de l\'utilisateur authentifié',
-                                         'user' => $existingUser], Response::HTTP_OK);
+                $userDataArray = [
+                    'id' => $existingUser->getId(),
+                    'email' => $existingUser->getEmail(),
+                    'username' => $existingUser->getName(),
+                    'pseudo' => $existingUser->getPseudo(),
+                    'imgProfil' => $existingUser->getImgProfile(),
+                ];
+    
+                return new JsonResponse($userDataArray, Response::HTTP_OK);
             }
         }
-        return new JsonResponse(['message' => 'Aucun utilisateur authentifié'], Response::HTTP_METHOD_NOT_ALLOWED);
+    
+        return new JsonResponse("User not found", Response::HTTP_NOT_FOUND);
     }
 }

@@ -51,4 +51,18 @@ class MainController extends AbstractController
     
         return $response;
     }
+
+
+    #[Route('/api/notifuser', name: 'app_api_user')]
+    public function getUserInfo(SerializerInterface $serializer): JsonResponse
+    {
+        $user = $this->getUser();
+        
+        if ($user) {
+                $data = $serializer->normalize($user, null, ['groups' => 'user_info']);
+                return new JsonResponse($data);
+        }
+
+        return new JsonResponse("Not Logged");
+    }
 }

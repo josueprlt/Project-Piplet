@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { Logo, PatchQuestion } from "../../components/icons";
+import { Logo } from "../../components/icons";
+import { BsPatchQuestion } from "react-icons/bs";
 import FormStep1 from "./Step1";
 import FormStep2 from "./Step2";
 import FormStep3 from "./Step3";
@@ -47,7 +48,7 @@ export default function RegisterPage2() {
         <div class="container">
           <div class="row position-relative">
             <div class="position-absolute">
-              <PatchQuestion className="img-fluid" />
+              <BsPatchQuestion className="img-fluid" style={{color: '#104547', fontSize: '36px'}} />
             </div>
 
             <div class="col-12 text-center">

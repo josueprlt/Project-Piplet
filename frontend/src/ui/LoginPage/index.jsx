@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Outlet } from "react-router-dom";
-import { Logo, Eye, EyeSlash } from "../../components/icons";
+import { Logo } from "../../components/icons";
+import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 /* import { GoogleLogin } from 'react-google-login'; */
@@ -47,7 +48,7 @@ function PasswordField({ value, change }) {
                 onChange={change}
             />
             <div className='div__svg' onClick={handleTogglePasswordVisibility}>
-                {showPassword ? <Eye /> : <EyeSlash />}
+                {showPassword ? <BsEye style={{color: '#104547', fontSize: '25px'}} /> : <BsEyeSlash style={{color: '#104547', fontSize: '25px'}} />}
             </div>
         </div>
     );
