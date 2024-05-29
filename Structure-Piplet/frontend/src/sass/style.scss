@@ -1,0 +1,32 @@
+@import "global";
+@import "login";
+@import "register";
+@import "dashboard";
+@import "accueil";
+@import "navigation";
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+#root {
+    height: 10rem;
+}
+
+#rotate__element {
+    transform: rotate(180deg);
+}
+
+label {
+    font-size: 18px;
+    font-weight: 500;
+}
