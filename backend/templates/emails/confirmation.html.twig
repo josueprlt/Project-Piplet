@@ -1,0 +1,47 @@
+{% extends '@email/default/notification/body.html.twig' %}
+
+
+{% block content %}
+    <container>
+        <row>
+            <columns class="text-center">
+                <h1>Cher Poète,</h1>
+            </columns>
+        </row>
+        <row>
+            <columns class="text-center">
+                <p>Merci d'avoir rejoint Piplet, la communauté dédiée aux amoureux des mots et de la poésie. Nous sommes ravis de vous accueillir parmi nous !</p>
+            </columns>
+        </row>
+        <row>
+            <columns class="text-center">
+                <p>Pour commencer votre voyage poétique, veuillez confirmer votre adresse e-mail en cliquant sur le bouton ci-dessous :</p>
+            </columns>
+        </row>
+        <row>
+            <columns class="text-center">
+                <button href="http://localhost:5173/registerconfirm/{{ usermail }}/{{ userpassword }}/{{ reglement ? reglement : 0 }}/{{ newsletter ? newsletter : 0 }}" id="continueButton">Continuer</button>
+            </columns>
+        </row>
+        <row>
+            <columns class="text-center">
+                <p>Une fois votre adresse e-mail confirmée, vous aurez accès à toutes les fonctionnalités de Piplet, y compris la publication de vos propres poèmes, la participation aux discussions et l'exploration des créations des autres membres de la communauté.</p>
+            </columns>
+        </row>
+        <row>
+            <columns class="text-center">
+                <p>Si vous n'avez pas créé de compte sur Piplet, veuillez ignorer cet e-mail. Si vous avez des questions ou rencontrez des problèmes, n'hésitez pas à nous contacter à l'adresse <a>support@piplet.com</a>.</p>
+            </columns>
+        </row>
+        <row>
+            <columns class="text-center">
+                <p>Bienvenue dans notre communauté de poètes !</p>
+            </columns>
+        </row>
+        <row>
+            <columns class="text-center">
+                <p>Cordialement, L'équipe de Piplet</p>
+            </columns>
+        </row>
+    </container>
+{% endblock %}

@@ -11782,8 +11782,12 @@ ul {
   font-size: clamp(16px, 5vw, 20px);
 }
 .login__section_logo {
+<<<<<<< HEAD:Structure-Piplet/frontend/src/sass/css/style.css
   padding-top: 1rem;
   width: clamp(8rem, 5vw, 509px);
+=======
+  font-size: clamp(1.625rem, 5vw, 209px);
+>>>>>>> e180a91ffbf64e2f819d3efff3709c95f484c0ee:frontend/src/sass/css/style.css
 }
 .login__section_btn {
   border-radius: 0;
