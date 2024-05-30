@@ -37,11 +37,7 @@ function TemplateNotifNotRead({ notif, fetchNotifRead, fetchNotifDelete }) {
                 {(notif.type === "text" || notif.type === "text2" || notif.type === "text3") && <BsBellFill className='notif-div-absolute-item-desktop d-none d-md-block' />}
 
 
-<<<<<<< HEAD:Structure-Piplet/frontend/src/ui/DashboardPage/dashboard.jsx
                 <div className='d-flex notif-div justify-content-between ai-center ai-md-end py-4 px-2 flex-column flex-md-row border rounded position-relative overflow-hidden'>
-=======
-                <div className='d-flex notif-div justify-content-between ai-center ai-md-end py-4 px-2 flex-column flex-md-row rounded position-relative overflow-hidden'>
->>>>>>> e180a91ffbf64e2f819d3efff3709c95f484c0ee:frontend/src/ui/DashboardPage/dashboard.jsx
 
                     {notif.type === "badge" && <NotifBadge className='notif-div-absolute-item-bg d-block d-md-none' />}
                     {(notif.type === "text" || notif.type === "text2" || notif.type === "text3") && <NotifGeneral className='notif-div-absolute-item-bg d-block d-md-none' />}
@@ -77,11 +73,7 @@ function TemplateNotifRead({ notif, fetchNotifDelete }) {
                 {(notif.type === "text" || notif.type === "text2" || notif.type === "text3") && <BsBellFill className='notif-div-absolute-item-desktop d-none d-md-block' />}
 
 
-<<<<<<< HEAD:Structure-Piplet/frontend/src/ui/DashboardPage/dashboard.jsx
                 <div className='d-flex notif-div justify-content-between ai-center ai-md-end py-4 px-2 flex-column flex-md-row border rounded position-relative overflow-hidden'>
-=======
-                <div className='d-flex notif-div justify-content-between ai-center ai-md-end py-4 px-2 flex-column flex-md-row rounded position-relative overflow-hidden'>
->>>>>>> e180a91ffbf64e2f819d3efff3709c95f484c0ee:frontend/src/ui/DashboardPage/dashboard.jsx
 
                     {notif.type === "badge" && <NotifBadge className='notif-div-absolute-item-bg d-block d-md-none' />}
                     {(notif.type === "text" || notif.type === "text2" || notif.type === "text3") && <NotifGeneral className='notif-div-absolute-item-bg d-block d-md-none' />}
@@ -113,11 +105,7 @@ function TemplateNotifBasket({ notif, fetchNotifPermantly }) {
                 {(notif.type === "text" || notif.type === "text2" || notif.type === "text3") && <BsBellFill className='notif-div-absolute-item-desktop d-none d-md-block' />}
 
 
-<<<<<<< HEAD:Structure-Piplet/frontend/src/ui/DashboardPage/dashboard.jsx
                 <div className='d-flex notif-div justify-content-between ai-center ai-md-end py-4 px-2 flex-column flex-md-row border rounded position-relative overflow-hidden'>
-=======
-                <div className='d-flex notif-div justify-content-between ai-center ai-md-end py-4 px-2 flex-column flex-md-row rounded position-relative overflow-hidden'>
->>>>>>> e180a91ffbf64e2f819d3efff3709c95f484c0ee:frontend/src/ui/DashboardPage/dashboard.jsx
 
                     {notif.type === "badge" && <NotifBadge className='notif-div-absolute-item-bg d-block d-md-none' />}
                     {(notif.type === "text" || notif.type === "text2" || notif.type === "text3") && <NotifGeneral className='notif-div-absolute-item-bg d-block d-md-none' />}
@@ -147,7 +135,6 @@ function NotifRenderTemplate({ userNotif, fetchNotifRead, fetchNotifDelete, fetc
                 userNotif.map((notif) => (
                     <React.Fragment key={notif.id}>
                         {notif.view === false && notif.basket === false && (
-<<<<<<< HEAD:Structure-Piplet/frontend/src/ui/DashboardPage/dashboard.jsx
                             <TemplateNotifNotRead notif={notif} fetchNotifRead={fetchNotifRead} fetchNotifDelete={fetchNotifDelete}/>
                         )}
                         {notif.view === true && notif.basket === false && (
@@ -155,25 +142,6 @@ function NotifRenderTemplate({ userNotif, fetchNotifRead, fetchNotifDelete, fetc
                         )}
                         {notif.basket === true && (
                             <TemplateNotifBasket notif={notif} fetchNotifPermantly={fetchNotifPermantly}/>
-=======
-                            <TemplateNotifNotRead
-                                notif={notif}
-                                fetchNotifRead={fetchNotifRead}
-                                fetchNotifDelete={fetchNotifDelete}
-                            />
-                        )}
-                        {notif.view === true && notif.basket === false && (
-                            <TemplateNotifRead
-                                notif={notif}
-                                fetchNotifDelete={fetchNotifDelete}
-                            />
-                        )}
-                        {notif.basket === true && (
-                            <TemplateNotifBasket
-                                notif={notif}
-                                fetchNotifPermantly={fetchNotifPermantly}
-                            />
->>>>>>> e180a91ffbf64e2f819d3efff3709c95f484c0ee:frontend/src/ui/DashboardPage/dashboard.jsx
                         )}
                     </React.Fragment>
                 ))
