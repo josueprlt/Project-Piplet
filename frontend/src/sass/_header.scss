@@ -1,0 +1,57 @@
+/* Header styles */
+button#open-about-btn {
+    position: absolute;
+    z-index: 200;
+    left: -35px;
+    top: -35px;
+    font-size: 1.4rem;
+    background: none;
+    border-radius: 100px;
+    color: white;
+    padding: 3rem;
+    background-color: $primary;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: transform ease 0.55s 0.012s;
+
+    & svg {
+        position: absolute;
+        font-size: 1.6rem;
+        right: 25px;
+        bottom: 25px;
+        /* max-width: 28px; */
+        #icon-stroke {
+            position: relative;
+            transform-origin: center center;
+            animation: rotation linear 38s infinite;
+        }
+        
+    }
+    &:hover, &:focus {
+        transition: transform ease-out 0.2s 0.012s background-color ease 0.24s 0.012s;
+        transform: scale(1.1);
+    }
+    &:hover {
+        background-color: darken($primary, 2%);
+    }
+    &.toggled {
+        transition: transform ease-out 0.75s 0.12s;
+        transform: translateX(-100%);
+    }
+}
+
+
+#inscription-section {
+
+    &-div {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@keyframes rotation {
+    to {
+        transform: rotate(360deg);
+    }
+}

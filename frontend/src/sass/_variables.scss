@@ -1,0 +1,86 @@
+$primary: #104547;
+$dark: #292E2E;
+$light: white;
+$very-light-gray: #F1F1F1;
+$success: #67EC84;
+$warning: #ECB767;
+$danger:#EC6767;
+$success-text-emphasis: #3A834A;
+$warning-text-emphasis: #BA945C;
+$danger-text-emphasis: #BC5454;
+$btn-border-radius: 4px;
+$btn-lg-border-radius: 4px;
+
+
+$secondary: #FF205B;
+$info: #FBEFF2;
+$body: #BFB7B9;
+
+$outline: #F2F2F2;
+
+$form-switch-color: $primary;
+$form-switch-checked-color: $primary;
+
+$utilities: (
+ "font-size": (
+  property: font-size,
+  class: fs,
+  values: (
+   16: 16px,
+   20: 20px,
+  )
+ )
+);
+
+$utilities: (
+ "height": (
+  property: height,
+  class: h,
+  values: (
+   8: 8px,
+   100: 100%,
+  )
+ )
+);
+
+$utilities: (
+ "width": (
+  property: width,
+  class: w,
+  values: (
+   160: 160px,
+   327: 327px,
+   100: 100%,
+  )
+ )
+);
+
+$utilities: (
+ "padding-left": (
+  property: padding-left,
+  class: pl,
+  responsive: true,
+  values: (
+   0r: 0rem,
+   1r: 1rem,
+   2r: 2rem,
+   3r: 3rem,
+   4r: 4rem,
+   5r: 5rem,
+  )
+ )
+);
+
+$utilities: (
+ "align-items": (
+  property: align-items,
+  class: ai,
+  responsive: true,
+  values: (
+   start: start,
+   end: end,
+   center: center,
+   between: space-between,
+  )
+ )
+);

@@ -1,0 +1,49 @@
+@import "global";
+@import "login";
+@import "register";
+@import "dashboard";
+@import "accueil";
+@import "navigation";
+
+@import "header";
+@import "about-section";
+@import "avatar-moliere";
+
+#root {
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+#rotate__element {
+    transform: rotate(180deg);
+}
+
+label {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#logo {
+    max-width: 200px;
+}
+
+@media screen and (min-width: 992px){
+    section#inscription-section {
+        min-height: 100vh;
+        padding-top: 5rem;
+        /* background: linear-gradient(133deg, rgba(246,244,245,1), rgba(246,244,245,0.85)),
+        url("./public/loginPage/bg-avatar.svg"); */
+        background-image: url("./public/loginPage/bg-avatar.svg");
+        background-repeat: no-repeat repeat;
+        background-position-y: bottom;
+        background-position-x: right;
+    }
+}
+@media screen and (min-width: 1400px){
+    #logo {
+        max-width: 235px;
+    }
+    section#inscription-section {
+        padding-top: 7rem;
+    }
+}

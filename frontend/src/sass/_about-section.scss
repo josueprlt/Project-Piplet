@@ -1,0 +1,78 @@
+/* About styles */
+svg#bg-about {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  #back-btn {
+    background-color: transparent;
+    color: $light;
+    border: none;
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
+    padding: 8px;
+    i {
+      font-size: 2rem;
+    }
+  }
+  
+  #wrapper button#close-about-btn {
+    font-size: 2rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    i {
+      transition: transform ease-in-out 0.25s 0.012s;
+      color: $light;
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      line-height: 1rem;
+    }
+    &:hover, &:focus {
+      i {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  
+  section#about-section {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    display: none;
+    #wrapper {
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: $primary;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        color: white;
+        // padding-top: 4rem;
+        clip-path: url('#clipPath');
+    }
+  }
+  
+  @media screen and (min-width: 576px){
+      section#about-section {
+        #wrapper {
+          background-image: url("../assets/img/bg-about-icon.svg");
+          background-repeat: no-repeat;
+          background-position: 28% 12%;
+        }
+      }
+  }
