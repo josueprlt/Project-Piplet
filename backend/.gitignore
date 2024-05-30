@@ -1,0 +1,85 @@
+# .gitignore for Symfony project
+
+# General
+/.idea
+/.vscode
+/.phpunit.result.cache
+
+# Logs and temp files
+/var/log/*
+/var/cache/*
+/var/sessions/*
+!/var/cache/.gitkeep
+!/var/log/.gitkeep
+!/var/sessions/.gitkeep
+
+# Symfony3/4/5 directories
+/web/bundles/
+/bin/*
+/vendor/*
+/node_modules/
+/public/bundles/
+/public/media/
+/public/uploads/
+/public/js/build/
+/public/css/build/
+/translations/*.bak
+
+# Composer dependencies
+/vendor/
+
+# Cache, session files and logs (Symfony3/4/5)
+!var/cache/.gitkeep
+!var/log/.gitkeep
+!var/sessions/.gitkeep
+/var/cache/*
+/var/logs/*
+/var/sessions/*
+
+# Cache and logs (Symfony2)
+app/cache/*
+app/logs/*
+!app/cache/.gitkeep
+!app/logs/.gitkeep
+
+# Environment variable files
+.env
+.env.local
+.env.*.local
+.php_cs.cache
+
+# PHPUnit
+/.phpunit.result.cache
+/tests/fixtures
+/tests/app/cache/*
+/tests/app/logs/*
+/tests/var/cache/*
+/tests/var/logs/*
+/tests/var/sessions/*
+
+# Parameters file
+/app/config/parameters.yml
+/config/parameters.yml
+/config/secrets/prod/prod.decrypt.private.php
+
+# Build assets
+/public/build/
+
+# Composer.lock should be committed
+!composer.lock
+
+# Ignore sensitive files
+/.env.local.php
+
+# Ignore pre-configured files (e.g., Docker and Kubernetes configuration)
+# Docker files
+docker-compose.override.yml
+
+# Kubernetes deployment files
+k8s/*
+
+# Mac specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
