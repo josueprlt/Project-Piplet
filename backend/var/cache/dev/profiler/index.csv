@@ -1,0 +1,5 @@
+cb184d,127.0.0.1,GET,http://localhost:8000/,1717031841,,302,request
+b4fb4b,127.0.0.1,GET,http://localhost:8000/,1717031855,,302,request
+857b8d,127.0.0.1,OPTIONS,http://localhost:8000/api/sameemail,1717035831,,200,request
+263bf7,127.0.0.1,GET,http://localhost:8000/api/sameemail,1717035832,f74b11,404,request
+f74b11,127.0.0.1,POST,http://localhost:8000/api/sameemail,1717035832,,404,request
